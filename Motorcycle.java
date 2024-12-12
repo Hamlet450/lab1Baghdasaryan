@@ -2,19 +2,21 @@ public class Motorcycle {
     private String make;
     private String vin;
     private int year;
-    private double horsepower;
     private Color color;
+    private Engine engine;
+    private Owner owner;
+    private Registration registration;
 
-
-    public Motorcycle(String make, String vin, int year, double horsepower, Color color) {
+    public Motorcycle(String make, String vin, int year, Color color, Engine engine, Owner owner, Registration registration) {
         this.make = make;
         this.vin = vin;
         this.year = year;
-        this.horsepower = horsepower;
         this.color = color;
+        this.engine = engine;
+        this.owner = owner;
+        this.registration = registration;
     }
 
-    
     public String getMake() {
         return make;
     }
@@ -27,33 +29,25 @@ public class Motorcycle {
         return year;
     }
 
-    public double getHorsepower() {
-        return horsepower;
-    }
-
     public Color getColor() {
         return color;
     }
 
-
-    public void setMake(String make) {
-        this.make = make;
+    public Engine getEngine() {
+        return engine;
     }
 
-    public void setVin(String vin) {
-        this.vin = vin;
+    public Owner getOwner() {
+        return owner;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public Registration getRegistration() {
+        return registration;
     }
 
-    public void setHorsepower(double horsepower) {
-        this.horsepower = horsepower;
-    }
 
-    public void setColor(Color color) {
-        this.color = color;
+    public String toString() {
+        return make + " " + vin + ", Year: " + year + ", Engine: " + engine + ", Color: " + color + "\nOwner: " + owner + "\nRegistration: " + registration;
     }
 }
 
